@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 85e8571f92471784e913f1263fab8ec2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Electrolux Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c1c615f933b228c4dafbac594ebf27e0, type: 3}
+  - {fileID: 12800000, guid: 40194df878954fb49829a3934e7572d4, type: 3}
+  - {fileID: 12800000, guid: 4051027fb8637b1489fe6281921ee6b8, type: 3}
+  - {fileID: 12800000, guid: b44d391305ba84144b082e7ac68e6b98, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

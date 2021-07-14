@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa30451c378dc6f40ab2bb028cb99efc, type: 3}
+  m_Name: VO
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 240717d94aadda34c905a90b1955b1c5, type: 3}
+  - {fileID: 8300000, guid: fc50321746983c24caf8b76bb26f20d4, type: 3}
+  - {fileID: 8300000, guid: 77b2dbaffbd32f5488457635458dffa0, type: 3}
+  - {fileID: 8300000, guid: 4d6ec582184f7444d9ec579bde4b2e2c, type: 3}
+  - {fileID: 8300000, guid: 514c5b8c6a22ea744b9857f28706766f, type: 3}
+  - {fileID: 8300000, guid: 01a1dc2f2b306744b9567a67314068d1, type: 3}
+  - {fileID: 8300000, guid: 763e17557215d2843b4437852998c429, type: 3}
+  mixerGroup: {fileID: -5847427545352582840, guid: 04ded8822891c9946a52dc63d3d687e5, type: 2}
