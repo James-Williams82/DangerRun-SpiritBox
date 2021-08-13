@@ -150,6 +150,8 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: ea8b6c7a9170a5c4ebb4fadd0690be1f
     name: BGM Adjust Volume
+  - guid: eb5ab1226ebbdc644b4bb9d5d834da57
+    name: VO
   m_AudioMixerGroupViews:
   - guids:
     - c9f96a009a7b1354d978544d0deac0d1
@@ -212,7 +214,7 @@ AudioMixerSnapshotController:
     eb5ab1226ebbdc644b4bb9d5d834da57: -5.7224774
     ea8b6c7a9170a5c4ebb4fadd0690be1f: -39.703533
     9f68416d5a357c048a821350a420e8f5: -5.3230715
-    097c6b9dc37e3c34b9224d906638c0d5: -22.003613
+    097c6b9dc37e3c34b9224d906638c0d5: -7.436929
   m_TransitionOverrides: {}
 --- !u!244 &2561564849692854960
 AudioMixerEffectController:

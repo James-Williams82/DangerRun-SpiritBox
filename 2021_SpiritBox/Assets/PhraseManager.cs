@@ -1,3 +1,5 @@
+using Com.FastEffect.DataTypes;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,16 +11,23 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Phrase
 {
-    public bool locked;
-    public string _phrase;
+    public string audioKey = "";
+    public float delay;
+    public List<string> _phrase = new List<string>();
     public UnityEvent phraseEvent;
 }
 
 public class PhraseManager : MonoBehaviour
 {
-    public TMP_InputField GetInput;
+    public CanvasGroup canvas;
 
-    public string currentPhrase;
+    public TMP_InputField UserInputField;
+
+    public bool disableInput = false;
+
+    public string userEnteredPhrase;
+
+    public FloatValue inputDelay;
 
     public List<Phrase> Phrases = new List<Phrase>();
 
@@ -26,61 +35,68 @@ public class PhraseManager : MonoBehaviour
 
     public UnityEvent incorrectPhraseEvent;
 
-
     public void CheckPhrase()
     {
-        int value = 0;
+        userEnteredPhrase = UserInputField.text.ToUpper();
 
-        currentPhrase = GetInput.text.ToLower();
+        
 
-        foreach (Phrase p in Phrases)
+        for (int i = 0; i < Phrases.Count; i++)
         {
-            value ++;
-
-            if (currentPhrase == p._phrase.ToLower())
+            if (Phrases[i]._phrase.Contains(userEnteredPhrase.ToUpper()))
             {
-                Debug.Log("The phrase " + currentPhrase + " matches " + p._phrase);
+                Debug.Log("Phrase " + userEnteredPhrase +" Found");
 
-                p.phraseEvent.Invoke();
+                //Phrase Specific Response
+                Phrases[i].phraseEvent.Invoke();
 
-                p.locked = true;
-
-                GetInput.text = "";
-
-                value = 0;
-
+                //Universal Correct Response
                 correctPhraseEvent.Invoke();
-            }
-            else
-            {
-                Debug.Log("The phrase " + currentPhrase + " does not match " + p._phrase);
 
-                if (value == Phrases.Count)
+                if (disableInput)
                 {
-                    incorrectPhraseEvent.Invoke();
-
-                    GetInput.text = "";
-
-                    value = 0;
+                    //Disable Input 
+                    DisableInput();
                 }
 
-            }
-
-
-            /*
-            if (p.locked)
-            {
-                Debug.Log("The phrase " + p._phrase + " has been unlocked");
-
-                return;
+                //Break Out if Phrase Found
+                break;
             }
             else
             {
-               
+                Debug.Log(userEnteredPhrase + " Phrase Not Found");
+                
+                //Universal Incorrect Response
+                incorrectPhraseEvent.Invoke();
             }
-            */
         }
     }
 
+    public void DisableInput()
+    {
+        float delay = inputDelay.Value;
+
+        canvas.interactable = false;
+
+        UserInputField.interactable = false;
+
+        Sequence sequence = DOTween.Sequence();
+
+        sequence.PrependInterval(delay);
+
+        sequence.OnComplete(EnableInput);
+    }
+
+    public void EnableInput()
+    {
+        UserInputField.text = "";
+
+        canvas.interactable = true;
+
+        UserInputField.interactable = true;
+
+        inputDelay.Value = 0;
+
+    }
 
 }

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: BTN
   m_EditorClassIdentifier: 
   AudioClips:
+  - {fileID: 8300000, guid: d1ce80a92e45b874ea60846fb068501e, type: 3}
   - {fileID: 8300000, guid: a33b902bbb0174545a6df9fb691045c7, type: 3}
   mixerGroup: {fileID: -877151199127989537, guid: 04ded8822891c9946a52dc63d3d687e5, type: 2}
