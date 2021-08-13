@@ -5,8 +5,6 @@ Audio is all placeholder but will be completed once the VO is completed. All cod
 
 KEYS to plug into Spirit Box
 
-Code #	LOU	SoIN	INDY	CHICAGO	Ghost to Use
-
 1	- GENESIS	
 
 2	- CHEROKEE, BRIDGEPOINT, MERIDIAN, PICKWICK
